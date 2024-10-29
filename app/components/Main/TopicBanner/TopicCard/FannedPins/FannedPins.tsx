@@ -1,7 +1,6 @@
 "use client"
 import React, { useState, useEffect, useMemo } from 'react';
 import FanPin, { Pin } from '@/app/components/Main/TopicBanner/TopicCard/FannedPins/FanPin/FanPin';
-import { useLoadingDispatch } from '@/app/contexts/LoadingContext';
 
 type FannedPinProps = {
   pins: Pin[];
@@ -13,18 +12,13 @@ const FannedPins: React.FC<FannedPinProps> = ({ pins, onColorsExtracted }) => {
   const TOTAL_ANGLE = 60;
   const [colors, setColors] = useState<[number, number, number][]>([]);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const dispatch = useLoadingDispatch();
-
   const memoizedColors = useMemo(() => colors, [colors]);
 
   useEffect(() => {
     if (onColorsExtracted && memoizedColors.length === totalPins) {
       onColorsExtracted(memoizedColors);
-      // dispatch({ type: 'SET_LOADING', payload: false });
-    } else {
-      // dispatch({ type: 'SET_LOADING', payload: true });
     }
-  }, [memoizedColors, onColorsExtracted, totalPins, dispatch]);
+  }, [memoizedColors, onColorsExtracted, totalPins]);
 
   const handleColorExtracted = (color: [number, number, number]) => {
     setColors((prevColors) => {

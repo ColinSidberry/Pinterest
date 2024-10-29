@@ -23,11 +23,11 @@ function Main() {
 
   return (
     <div className="relative min-h-screen">
-      {isLoading && (
-        <div className="fixed inset-0 flex items-center justify-center bg-white z-50">
-          <Loading />
-        </div>
-      )}
+      {/*{isLoading && (*/}
+      {/*  <div className="fixed inset-0 flex items-center justify-center bg-white z-50">*/}
+      {/*    <Loading />*/}
+      {/*  </div>*/}
+      {/*)}*/}
       <div
         className="relative z-10"
         style={{

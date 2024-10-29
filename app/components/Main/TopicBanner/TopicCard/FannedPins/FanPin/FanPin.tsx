@@ -1,5 +1,5 @@
 "use client"
-import React, {useMemo} from 'react';
+import React, {useEffect} from 'react';
 import {useColor} from "color-thief-react";
 
 export interface Pin {
@@ -31,11 +31,10 @@ const FanPin: React.FC<FanPinProps> = ({ imageURL, className = '', rotation, onC
 
   const { data: color } = useColor(imageURL, 'rgbArray', { crossOrigin: 'anonymous' });
 
-  const memoizedColor = useMemo(() => {
+  useEffect(() => {
     if (color && onColorExtracted) {
       onColorExtracted(color);
     }
-    return color;
   }, [color, onColorExtracted]);
 
   return (

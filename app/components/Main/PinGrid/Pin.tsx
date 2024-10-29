@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { useRouter } from 'next/navigation';
-import { ChevronDown, ExternalLink, Download, MoreHorizontal, MoveUpRight } from 'lucide-react';
+import { ChevronDown, Download, MoveUpRight } from 'lucide-react';
 import { Button } from "@/components/ui/button"
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
+import { Popover, PopoverTrigger } from "@/components/ui/popover"
 import TruncatedText from "@/components/ui/TruncatedText";
+import Image from 'next/image';
 
 export type PinProps = {
   id?: string;
@@ -14,7 +15,7 @@ export type PinProps = {
   userAvatar?: string;
 };
 
-const Pin = ({ id, title, link, imageURL, userName, userAvatar }: PinProps) => {
+const Pin = ({ id, title, link, imageURL }: PinProps) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isBoardsOpen, setIsBoardsOpen] = useState(false);
   const router = useRouter();
@@ -52,7 +53,14 @@ const Pin = ({ id, title, link, imageURL, userName, userAvatar }: PinProps) => {
         onMouseLeave={() => setIsHovered(false)}
         onClick={handlePinClick}
       >
-        <img src={imageURL} alt={title} className="w-full object-cover rounded-xl" />
+        <Image
+          src={imageURL}
+          alt={title}
+          className="w-full object-cover rounded-xl"
+          width={500}
+          height={300}
+          layout="responsive"
+        />
 
         {isHovered && (
           <div className="absolute inset-0 z-11 flex flex-col justify-between p-4 bg-black bg-opacity-30 rounded-xl transition-opacity">

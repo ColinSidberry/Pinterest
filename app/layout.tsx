@@ -4,7 +4,6 @@ import "./globals.css";
 import Header from "@/app/components/Header";
 import Provider from "./providers/Provider";
 import React from "react";
-import {LoadingProvider} from "@/app/contexts/LoadingContext";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -34,9 +33,7 @@ export default function RootLayout({
       >
         <Provider>
           <Header/>
-          {/* <LoadingProvider> */}
-            {children}
-          {/* </LoadingProvider> */}
+          {children}
         </Provider>
       </body>
     </html>

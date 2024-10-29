@@ -11,7 +11,7 @@ export default function TruncatedText({ text, maxWidth = 100 }: TruncatedTextPro
     try {
       new URL(str);
       return true;
-    } catch (_) {
+    } catch {
       return false;
     }
   };
@@ -20,7 +20,7 @@ export default function TruncatedText({ text, maxWidth = 100 }: TruncatedTextPro
 
   if (isURL(text)) {
     const parsedURL = new URL(text);
-    displayText = parsedURL.hostname.replace('www.', ''); // pinterest.com
+    displayText = parsedURL.hostname.replace('www.', ''); // https://www.pinterest.com/homefeed/ => pinterest.com
   }
 
   return (

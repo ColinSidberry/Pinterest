@@ -2,7 +2,7 @@
 
 import React, {useEffect} from 'react';
 import {getFirestore, doc, getDoc} from "@firebase/firestore";
-import app from "@/app/Shared/firebaseConfig";
+import {app} from "@/app/Shared/firebaseConfig";
 
 interface ProfileInterface {
     params: {
@@ -29,7 +29,7 @@ function Profile({params}: ProfileInterface) {
             const email = params.userId.replace('%40','@');
             getUserInfo(email)
         }
-    }, [params]);
+    }, [db, params]);
 
 
     return (

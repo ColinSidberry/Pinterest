@@ -1,6 +1,5 @@
 "use client"
 import React, { useMemo } from 'react';
-import { useLoadingDispatch, INCREMENT_COLOR_EXTRACTION_COUNT } from '@/app/contexts/LoadingContext';
 import FannedPins from '@/app/components/Main/TopicBanner/TopicCard/FannedPins/FannedPins';
 import { Pin } from '@/app/components/Main/TopicBanner/TopicCard/FannedPins/FanPin/FanPin';
 
@@ -10,16 +9,18 @@ interface TopicCardProps {
 }
 
 const TopicCard: React.FC<TopicCardProps> = ({ topic, pins }) => {
-  const dispatch = useLoadingDispatch();
   const [extractedColors, setExtractedColors] = React.useState<[number, number, number][]>([]);
 
   const backgroundColor = useMemo(() => {
     if (extractedColors.length === pins.length && extractedColors.length > 0) {
-      const totalColor = extractedColors.reduce((acc, color) => {
-        return [acc[0] + color[0], acc[1] + color[1], acc[2] + color[2]];
-      }, [0, 0, 0]);
+      const totalColor = extractedColors.reduce(
+        (acc, color) => {
+          return [acc[0] + color[0], acc[1] + color[1], acc[2] + color[2]];
+        }, [0, 0, 0]);
 
-      const avgColor = totalColor.map((val) => Math.round(val / extractedColors.length));
+      const avgColor = totalColor.map(
+        (val) => Math.round(val / extractedColors.length)
+      );
       const [r, g, b] = avgColor;
       const BRIGHTNESS_THRESHOLD = 255;
       const brightness = r * 0.299 + g * 0.587 + b * 0.114;
@@ -37,12 +38,6 @@ const TopicCard: React.FC<TopicCardProps> = ({ topic, pins }) => {
   const handleColorsExtracted = (colors: [number, number, number][]) => {
     setExtractedColors(colors);
   };
-
-  // useEffect(() => {
-  //   if (extractedColors.length === pins.length) {
-  //     dispatch({ type: INCREMENT_COLOR_EXTRACTION_COUNT });
-  //   }
-  // }, [extractedColors, pins.length, dispatch]);
 
   return (
     <div
