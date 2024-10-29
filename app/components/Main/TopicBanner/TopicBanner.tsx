@@ -1,6 +1,5 @@
 "use client"
 import React, { useRef, useState, useEffect } from 'react';
-// import { useLoadingDispatch, SET_TOTAL_TOPICS } from '@/app/contexts/LoadingContext';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import TopicCard from '@/app/components/Main/TopicBanner/TopicCard/TopicCard';
 import { Pin } from '@/app/components/Main/TopicBanner/TopicCard/FannedPins/FanPin/FanPin';
