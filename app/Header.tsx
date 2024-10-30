@@ -1,6 +1,5 @@
 "use client"
 import React, {useState, useEffect} from 'react';
-import Image from "next/image";
 import {HiSearch, HiMenu} from "react-icons/hi";
 import {useSession, signIn, signOut} from "next-auth/react"
 import {doc, getFirestore, setDoc} from "@firebase/firestore";
