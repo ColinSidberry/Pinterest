@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import TopicBanner from "@/app/components/Main/TopicBanner/TopicBanner";
 import PinGrid from "@/app/components/Main/PinGrid/PinGrid";
+import {Loading} from "@/app/components/Loading/Loading";
 
 function Main() {
   const [isLoading, setIsLoading] = useState(true);
@@ -22,11 +23,11 @@ function Main() {
 
   return (
     <div className="relative min-h-screen">
-      {/*{isLoading && (*/}
-      {/*  <div className="fixed inset-0 flex items-center justify-center bg-white z-50">*/}
-      {/*    <Loading />*/}
-      {/*  </div>*/}
-      {/*)}*/}
+      {isLoading && (
+        <div className="fixed inset-0 flex items-center justify-center bg-white z-50">
+          <Loading />
+        </div>
+      )}
       <div
         className="relative z-10"
         style={{

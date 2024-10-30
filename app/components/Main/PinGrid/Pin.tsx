@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useRouter } from 'next/navigation';
+// import { useRouter } from 'next/navigation'; // TODO: re-add after building the pin details page
 import { ChevronDown, Download, MoveUpRight } from 'lucide-react';
 import { Button } from "@/components/ui/button"
 import { Popover, PopoverTrigger } from "@/components/ui/popover"
@@ -15,14 +15,14 @@ export type PinProps = {
   userAvatar?: string;
 };
 
-const Pin = ({ id, title, link, imageURL }: PinProps) => {
+const Pin = ({ title, link, imageURL }: PinProps) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isBoardsOpen, setIsBoardsOpen] = useState(false);
-  const router = useRouter();
+  // const router = useRouter();
 
   const handlePinClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    router.push(`/pin/${id}`);
+    // router.push(`/pin/${id}`);
   };
 
   const handleDownload = (e: React.MouseEvent) => {
