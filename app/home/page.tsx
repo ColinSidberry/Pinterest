@@ -1,10 +1,10 @@
 "use client"
 import React, { useState, useEffect, useMemo } from 'react';
-import TopicBanner from "@/app/components/Main/TopicBanner/TopicBanner";
-import PinGrid from "@/app/components/Main/PinGrid/PinGrid";
-import {Loading} from "@/app/components/Loading/Loading";
+import TopicBanner from "@/app/home/components/Home/TopicBanner/TopicBanner";
+import PinGrid from "@/app/home/components/Home/PinGrid/PinGrid";
+import {Loading} from "@/app/home/components/Loading/Loading";
 
-function Main() {
+function PrivateHome() {
   const [isLoading, setIsLoading] = useState(true);
   const [contentOpacity, setContentOpacity] = useState(0);
 
@@ -43,4 +43,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default PrivateHome;

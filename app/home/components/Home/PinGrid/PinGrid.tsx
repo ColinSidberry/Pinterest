@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import Pin from "@/app/components/Main/PinGrid/Pin";
+import Pin from "@/app/home/components/Home/PinGrid/Pin";
 import {useLoadingDispatch, SET_PIN_GRID_READY} from '@/app/contexts/LoadingContext';
 
 const images = [

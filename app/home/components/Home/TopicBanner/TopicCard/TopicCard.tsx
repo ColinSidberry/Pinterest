@@ -1,7 +1,7 @@
 "use client"
 import React, { useMemo } from 'react';
-import FannedPins from '@/app/components/Main/TopicBanner/TopicCard/FannedPins/FannedPins';
-import { Pin } from '@/app/components/Main/TopicBanner/TopicCard/FannedPins/FanPin/FanPin';
+import FannedPins from '@/app/home/components/Home/TopicBanner/TopicCard/FannedPins/FannedPins';
+import { Pin } from '@/app/home/components/Home/TopicBanner/TopicCard/FannedPins/FanPin/FanPin';
 
 interface TopicCardProps {
   topic: string;

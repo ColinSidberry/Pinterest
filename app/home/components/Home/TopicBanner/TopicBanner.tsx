@@ -1,8 +1,8 @@
 "use client"
 import React, { useRef, useState, useEffect } from 'react';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
-import TopicCard from '@/app/components/Main/TopicBanner/TopicCard/TopicCard';
-import { Pin } from '@/app/components/Main/TopicBanner/TopicCard/FannedPins/FanPin/FanPin';
+import TopicCard from '@/app/home/components/Home/TopicBanner/TopicCard/TopicCard';
+import { Pin } from '@/app/home/components/Home/TopicBanner/TopicCard/FannedPins/FanPin/FanPin';
 
 const topics = [
   'TV room', 'The Pierce', "Mommy's room",

@@ -1,6 +1,6 @@
 "use client"
 import React, { useState, useEffect, useMemo } from 'react';
-import FanPin, { Pin } from '@/app/components/Main/TopicBanner/TopicCard/FannedPins/FanPin/FanPin';
+import FanPin, { Pin } from '@/app/home/components/Home/TopicBanner/TopicCard/FannedPins/FanPin/FanPin';
 
 type FannedPinProps = {
   pins: Pin[];

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { HiSearch, HiMenu } from "react-icons/hi";
 import { useSession, signIn, signOut } from "next-auth/react"
 import { doc, getFirestore, setDoc } from "@firebase/firestore";
-import { app } from './../Shared/firebaseConfig'
+import { app } from './Shared/firebaseConfig'
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -16,7 +16,7 @@ function Header() {
 
   const handleSignIn = async () => {
     try {
-      await signIn("google", { callbackUrl: "/" })
+      await signIn("google", { callbackUrl: "/home" })
     } catch (e) {
       console.error("Error signing in", e);
     }
@@ -56,7 +56,7 @@ function Header() {
     <div className='flex gap-3 md:gap-2 items-center p-6'>
       <Image src={'/pinterest-logo.png'} alt={'logo'} width={50} height={50}
              className="hover:bg-gray-300 p-2 rounded-full cursor-pointer"/>
-      <Link href="/" passHref>
+      <Link href="/public" passHref>
         <button className={`font-semibold p-2 px-4 rounded-full ${pathname === '/' ? 'bg-black text-white' : ''}`}>Home</button>
       </Link>
       <button className='font-semibold p-2 px-4 rounded-full'>Create</button>
