@@ -7,7 +7,7 @@ export const Loading: React.FC = () => {
   return (
     <div className="flex items-center justify-center w-full h-full">
       <Image
-        src={'/pinterest-logo.jpeg'}
+        src={'/pinterest-logo.jpg'}
         alt="Loading..."
         className={`${styles.heartbeat} transform scale-90 hover:scale-100 transition duration-500 ease-in-out`}
         width={100}

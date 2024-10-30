@@ -54,7 +54,7 @@ function Header() {
 
   return (
     <div className='flex gap-3 md:gap-2 items-center p-6'>
-      <Image src={'/pinterest-logo.jpeg'} alt={'logo'} width={50} height={50}
+      <Image src={'/pinterest-logo.jpg'} alt={'logo'} width={50} height={50}
              className="hover:bg-gray-300 p-2 rounded-l cursor-pointer"/>
       <Link href="/public" passHref>
         <button className={`font-semibold p-2 px-4 rounded-full ${pathname === '/' ? 'bg-black text-white' : ''}`}>Home</button>
