@@ -12,9 +12,9 @@ This Pinterest clone is a comprehensive demonstration of my expertise in modern 
 
 ### Find me on:
 
-[![Medium](https://img.shields.io/badge/Medium-000000?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@colinsidberry)
+- [Medium](https://medium.com/@colinsidberry) - Architecture & Design Thoughts
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/colin-sidberry/)
+- [LinkedIn](https://www.linkedin.com/in/colin-sidberry/) - About Me
 
 ---
 
@@ -25,7 +25,6 @@ This Pinterest clone is a comprehensive demonstration of my expertise in modern 
 - **Backend**: Firebase (Auth, Firestore, Storage)
 - **State Management**: React Context API, Custom Hooks
 - **Testing**: Jest, React Testing Library
-- **CI/CD**: GitHub Actions
 - **Deployment**: Vercel
 ---
 ## Roadmap and Scalability Considerations
@@ -35,28 +34,36 @@ This Pinterest clone is a comprehensive demonstration of my expertise in modern 
 - [x] Responsive Design Implementation
 - [x] User persistence on login
 - [x] Basic Pin Viewing
+- [x] Responsive Layout
 
 ### Upcoming Features and Scalability Plans
 
 1. **Enhanced Content Discovery**
-  - Implement an AI-powered recommendation engine using TensorFlow.js
-  - Develop a sophisticated search algorithm with Elasticsearch
+   - Implement AI-powered recommendation engine using TensorFlow.js
+   - Develop sophisticated search algorithm with Elasticsearch
+   - Implement WebSocket connections for live updates and notifications
 
-2. **Performance Optimizations**
-  - Implement code splitting and lazy loading for improved initial load times
-  - Utilize service workers for offline capabilities and faster subsequent loads
+2. **User Interface Improvements**
+   - Create Pin Details view
+   - Develop Boards View under profile page
+   - Implement code splitting and lazy loading for improved initial load times
+   - Utilize service workers for offline capabilities and faster subsequent loads
+   - Design and develop mobile app version
 
-3. **Advanced User Interactions**
-  - Develop a real-time collaboration feature for shared boards
-  - Implement WebSocket connections for live updates and notifications
+3. **Backend and Data Management**
+   - Migrate to Firestore for content storage instead of public folder
+   - Implement better guarding for protected routes
+   - Design and implement microservices architecture for increased scalability
+   - Improve logging with centralized logger
 
-4. **Scalable Architecture**
-  - Design a microservices architecture to handle increased user load
-  - Implement database sharding strategies for improved query performance
+4. **Performance and Monitoring**
+   - Integrate OpenTelemetry for comprehensive application monitoring
+   - Implement performance optimizations for handling increased user load
 
-5. **Analytics and Monitoring**
-  - Integrate OpenTelemetry for comprehensive application monitoring
-  - Develop a custom analytics dashboard for user behavior insights
+5. **Testing and CI/CD Enhancements**
+   - Add comprehensive test suite (unit, integration, and end-to-end tests)
+   - Integrate automated testing into the existing Vercel deployment pipeline
+   - Set up staging environments for pre-production testing
 ---
 ## Getting Started
 
