@@ -30,7 +30,7 @@ This Pinterest clone is a comprehensive demonstration of my expertise in modern 
 ## Roadmap and Scalability Considerations
 
 ### Current Features
-- [x] User Authentication and Authorization
+- [x] User Authentication, Authorization, Route Protection 
 - [x] Responsive Design Implementation
 - [x] User persistence on login
 - [x] Basic Pin Viewing
@@ -52,9 +52,9 @@ This Pinterest clone is a comprehensive demonstration of my expertise in modern 
 
 3. **Backend and Data Management**
    - Migrate to Firestore for content storage instead of public folder
-   - Implement better guarding for protected routes
    - Design and implement microservices architecture for increased scalability
    - Improve logging with centralized logger
+   - Clean up components to better align with SRP
 
 4. **Performance and Monitoring**
    - Integrate OpenTelemetry for comprehensive application monitoring
